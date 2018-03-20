@@ -61,6 +61,7 @@ public class Exercicio12 {
         aluno3.setEnderecoComercial(endereco1);
         aluno3.setNome("Bolt");
         aluno3.setNumeroDeMatricula("12543");
+       
         
         System.out.println(aluno.mostraTudo());
         System.out.println(aluno2.mostraTudo());
