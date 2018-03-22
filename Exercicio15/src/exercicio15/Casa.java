@@ -14,7 +14,7 @@ public class Casa {
     private Porta porta1;
     private Porta porta2;
     private Porta porta3;
-    private int quantidadeDePortas;
+    static int quantidadeDePortas;
 
     public void pinta(String cor) {
         this.cor = cor;
@@ -23,25 +23,54 @@ public class Casa {
     public int quantasPortasEstaoAbertas()
     {
         int quantidadeDePortasabertas = 0;
-        if(this.porta1.estaAberta() == true)
+        
+        if(this.porta1 != null)
         {
-            quantidadeDePortasabertas++;
+            if(this.porta1.estaAberta() == true)
+            {
+                quantidadeDePortasabertas++;
+            }
         }
-        if(this.porta2.estaAberta() == true)
+        
+        
+        if(this.porta2 != null)
         {
-            quantidadeDePortasabertas++;
+            if(this.porta2.estaAberta() == true)
+            {
+                quantidadeDePortasabertas++;
+            }
         }
-        if(this.porta3.estaAberta() == true)
+        
+        
+        if(this.porta3 != null)
         {
-            quantidadeDePortasabertas++;
+           if(this.porta3.estaAberta() == true)
+           {
+               quantidadeDePortasabertas++;
+           }
         }
+       
         
         return quantidadeDePortasabertas;
     }
     
     public int totalDePortasInstaladas()
     {
-        return quantidadeDePortas;
+        int contador = 0;
+        if(porta1 != null)
+        {
+            contador++;
+        }
+        if(porta2 != null)
+        {
+            contador++;
+        }
+        if(porta3 != null)
+        {
+            contador++;
+        }
+        
+        return contador;
     }
 
     public String getCor() {
@@ -50,17 +79,14 @@ public class Casa {
 
     public void setPorta1(Porta porta1) {
         this.porta1 = porta1;
-        this.quantidadeDePortas++;
     }
 
     public void setPorta2(Porta porta2) {
         this.porta2 = porta2;
-        this.quantidadeDePortas++;
     }
 
     public void setPorta3(Porta porta3) {
         this.porta3 = porta3;
-        this.quantidadeDePortas++;
     }
     
     

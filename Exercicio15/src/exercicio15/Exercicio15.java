@@ -19,12 +19,14 @@ public class Exercicio15 {
         Casa c1 = new Casa();
         Porta p1 = new Porta();
         Porta p2 = new Porta();
-        Porta p3 = new Porta();
+     
     
         c1.pinta("Vermelha");
         c1.setPorta1(p1);
         c1.setPorta2(p2);
-        c1.setPorta3(p3);
+        
+        
+  
         
         p2.abre();
         p1.abre();
