@@ -21,10 +21,10 @@ public class Tamagoshi {
     
     public Tamagoshi(String _nome, double _fome, double _saude, int _idade)
     {
-        this.nome = _nome;
-        this.fome = _fome;
-        this.saude = _saude;
-        this.idade = _idade;
+        this.setNome(_nome);
+        this.setFome(_fome);
+        this.setSaude(_saude);
+        this.setIdade(_idade);
     }
     
     /*Este humor é uma combinação entre os atributos Fome e Saúde ou seja, 
@@ -43,12 +43,12 @@ public class Tamagoshi {
             return;
         }
         
-        if(this.fome <= 0)
+        if(this.fome < 0)
         {
             return;
         }
         
-        if((this.fome - fome) <= 0)
+        if((fome - this.fome) <= 0)
         {
             this.fome = 1;
         }
@@ -69,12 +69,12 @@ public class Tamagoshi {
             return;
         }
         
-        if(this.saude <= 0)
+        if(this.saude < 0)
         {
             return;
         }
         
-        if((this.saude - saude) <= 0)
+        if((saude - this.saude) <= 0)
         {
             this.saude = 1;
         }
